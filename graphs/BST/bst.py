@@ -11,7 +11,7 @@ class BST_Node:
             self.right = None
 
     def insert(self, new_val:int):
-        while(self.val != None):
+        while(self.val):
             if(new_val < self.val):
                 self = self.left
             elif(new_val > self.val):
@@ -28,7 +28,7 @@ class BST_Node:
             self.insert(val)
     
     def lookup_val(self, val:float) -> bool:
-        while(self.val != None):
+        while(self.val):
             if(self.val == val):
                 return True
             elif(val < self.val):

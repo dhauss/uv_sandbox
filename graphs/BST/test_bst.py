@@ -13,12 +13,12 @@ def main():
     assert root.right.right.val == 25
     
     # lookup
-    assert root.lookup_val(10) == True
-    assert root.lookup_val(5) == True
-    assert root.lookup_val(15) == True
-    assert root.lookup_val(25) == True
-    assert root.lookup_val(-1) == False
-    assert root.lookup_val(99) == False
+    assert root.lookup_val(10)
+    assert root.lookup_val(5)
+    assert root.lookup_val(15)
+    assert root.lookup_val(25)
+    assert not root.lookup_val(-1)
+    assert not root.lookup_val(99)
 
     # insert_list
     root = BST_Node(15)
@@ -27,7 +27,6 @@ def main():
     assert root.left.val == 5
     assert root.left.right.val == 10
     assert root.right.val == 25
-
 
 
 if __name__ == "__main__":
