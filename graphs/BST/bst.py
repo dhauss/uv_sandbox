@@ -37,3 +37,12 @@ class BST_Node:
                 self = self.right
         
         return False
+
+    def min_val(self):
+        if(not self or not self.left):
+            return None
+        
+        if(not self.left.val):
+            return self.val
+        
+        return self.left.min_val()
